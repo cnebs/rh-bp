@@ -7,8 +7,17 @@ const Reducer = (state, action) => {
       };
     
     case 'ADD_LIST_ITEM':
-      const list = state.list;
+      var list = state.list;
       list.push(action.payload);
+      return {
+        ...state,
+        list: list
+      };
+
+    case 'DELETE_LIST_ITEM':
+      var list = state.list,
+          index = action.payload;
+      list.splice(index, 1);
       return {
         ...state,
         list: list

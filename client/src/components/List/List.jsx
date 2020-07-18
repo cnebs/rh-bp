@@ -14,7 +14,7 @@ const List = () => {
   return (
       state.toggle ?
         <ul>
-          {state.list.map( (item, i) => <Item key={i} item={item} />)}
+          {state.list.map( (item, i) => <Item key={i} item={item} index={i} />)}
         </ul>
       : <></>
   )
