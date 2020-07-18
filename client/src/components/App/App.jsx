@@ -7,15 +7,11 @@ const App = () => {
   const [toggle, setToggle] = useState(true);
   const [list, updateList] = useState(['a', 'b', 'c']);
 
-  const onToggleList = () => {
-    setToggle(!toggle);
-  };
-
     return (
       <div>
         <Toggle
           toggle={toggle}
-          onToggleList={() => (onToggleList())}
+          onToggleList={() => (setToggle(!toggle))}
         />
         {toggle && <List list={list} />}
       </div>
