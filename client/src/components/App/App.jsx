@@ -1,30 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Toggle from '../Toggle/Toggle.jsx';
 import List from '../List/List.jsx';
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
+const App = () => {
 
-    this.state = {
-      toggle: true,
-      list: ['a', 'b', 'c',]
-    };
-  }
+  const [toggle, setToggle] = useState(true);
+  const [list, updateList] = useState(['a', 'b', 'c']);
 
-  onToggleList = () => {
-    this.setState(prevState => ({ toggle: !prevState.toggle }));
+  const onToggleList = () => {
+    setToggle(!toggle);
   };
 
-  render() {
     return (
       <div>
         <Toggle
-          toggle={this.state.toggle}
-          onToggleList={this.onToggleList}
+          toggle={toggle}
+          onToggleList={() => (onToggleList())}
         />
-        {this.state.toggle && <List list={this.state.list} />}
+        {toggle && <List list={list} />}
       </div>
     );
-  }
+
 }
+
+export default App;
