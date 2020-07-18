@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "react-dev": "webpack -d --watch --config ./webpack.config.dev.js",
     "server-dev": "nodemon -r dotenv/config server/index.js",
-    "dev": "run-p react-dev server-dev"
+    "react-prod": "webpack --env.PORT=3000 --config ./webpack.config.js -w --mode production",
+    "dev": "run-p react-dev server-dev",
+    "start": "run-p server-dev react-prod"
   },
   "author": "Charles A. Neblett",
   "license": "ISC",
