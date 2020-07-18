@@ -9,7 +9,7 @@ const Reducer = (state, action) => {
 
     case 'ADD_LIST_ITEM':
       const list = state.list;
-      oldState.push(action.payload);
+      list.push(action.payload);
       return {
         ...state,
         list: list

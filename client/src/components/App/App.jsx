@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Toggle from '../Toggle/Toggle.jsx';
 import List from '../List/List.jsx';
+import Store from '../../globalState/Store.js';
 
 const App = () => {
 
-  const [toggle, setToggle] = useState(true);
-  const [list, updateList] = useState(['a', 'b', 'c']);
 
   useEffect(() => console.log('App mounted!'), []);
 
     return (
-      <div>
-        <Toggle
-          toggle={toggle}
-          onToggleList={() => (setToggle(!toggle))}
-        />
-        {toggle && <List list={list} />}
-      </div>
+      <Store>
+        <Toggle />
+        <List />
+      </Store>
     );
 
 }
