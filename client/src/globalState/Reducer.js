@@ -11,7 +11,7 @@ const Reducer = (state, action) => {
       list.push(action.payload);
       return {
         ...state,
-        list: list
+        list
       };
 
     case 'DELETE_LIST_ITEM':
@@ -20,7 +20,7 @@ const Reducer = (state, action) => {
       list.splice(index, 1);
       return {
         ...state,
-        list: list
+        list
       };
 
     default:
