@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Toggle from '../Toggle/Toggle.jsx';
 import List from '../List/List.jsx';
 
@@ -6,6 +6,8 @@ const App = () => {
 
   const [toggle, setToggle] = useState(true);
   const [list, updateList] = useState(['a', 'b', 'c']);
+
+  useEffect(() => console.log('App mounted!'), []);
 
     return (
       <div>
