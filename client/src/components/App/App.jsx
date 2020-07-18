@@ -6,14 +6,16 @@ import Store from '../../globalState/Store.js';
 
 const App = () => {
 
-  useEffect(() => console.log('App mounted!'), []);
+  useEffect( () => console.log('App mounted!'), [] );
 
     return (
       <Store>
+
         <h1>globalState ToDo List!</h1>
         <Toggle />
         <List />
         <Insert />
+
       </Store>
     );
 

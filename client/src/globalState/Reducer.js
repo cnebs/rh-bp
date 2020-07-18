@@ -1,12 +1,11 @@
 const Reducer = (state, action) => {
-	switch (action.type) {
-
-		case 'TOGGLE_LIST':
-			return {
-				...state,
-				toggle: action.payload
+  switch (action.type) {
+    case 'TOGGLE_LIST':
+      return {
+        ...state,
+        toggle: action.payload
       };
-
+    
     case 'ADD_LIST_ITEM':
       const list = state.list;
       list.push(action.payload);
@@ -15,9 +14,9 @@ const Reducer = (state, action) => {
         list: list
       };
 
-		default:
-			return state;
-	};
+    default:
+      return state;
+  };
 };
 
 export default Reducer;
