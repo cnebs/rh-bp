@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules/
+yarn.lock
+
+# Optional npm cache directory
+.npm
+
+# Mac Finder
+.DS_Store
+
+# Webpack
+bundle.js
+bundle.js.gz
+bundle.*
+node_modules
+node_modules
+
+# environment variables
+.env
