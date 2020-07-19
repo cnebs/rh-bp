@@ -1,9 +1,13 @@
 # React Hooks Global-State Boilerplate
-React-Express boilerplate using global state store with hooks to replace the need for Redux
+React-Express CRUD boilerplate using a global state store.
 
-Includes some components to render an initial todo list that uses local state with hooks and a global state with Context API & hooks :)
+This global state store behaves like Redux, but uses only React Context API & Hooks.
 
-Remove both the components and reducer's switch cases to make a clean boilerplate for development.
+Includes some components to render a simple todo list :)
+
+These components include examples of state, effect, and context hooks.
+
+Remove the components and reducer's switch cases to make a clean boilerplate.
 
 Use as a template for your own projects as needed.
 
@@ -11,13 +15,13 @@ Use `npm run dev` to start.
 
 ___
 
-This boilerplate contains webpack logic to load environment variables into react without using create-react-app.
+#### This contains webpack logic to load environment variables into react for UI access:
 
 In development `npm run dev`, add environment variables to the `.env.dev` file to access them on both the client and server.
 
 In production `npm run start`, either create a `.env` file with your variables or simply `$EXPORT` them in the shell.
 
-A Dockerfile is also included, which should use a port environment variable if containerized and deployed on the cloud.
+A Dockerfile is also included, and offers a basis for using a **port** environment variable.
 
 ___
 
