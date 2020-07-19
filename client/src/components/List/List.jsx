@@ -7,7 +7,7 @@ const List = () => {
   const [state, dispatch] = useContext(Context);
 
   return useMemo( () => {
-    console.log('List updated.')
+    console.log('List re-render.')
       return (
         state.toggle ?
           <ul>
@@ -15,7 +15,7 @@ const List = () => {
           </ul>
         : <></>
       );
-  }, [state.list.length])
+  }, [state.list.length, state.toggle])
 
 }
 

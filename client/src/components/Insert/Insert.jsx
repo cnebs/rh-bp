@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useMemo} from 'react';
 import { Context } from '../../globalState/Store.js';
 
 
@@ -11,16 +11,19 @@ const Insert = () => {
     insert(e.target.value);
   }
 
-  return (
-    state.toggle ?
-      <span>
-        <input type="text" onChange={handleOnChange} />
-        <button type="button" onClick={() => {dispatch({ type: 'ADD_LIST_ITEM', payload: insertion })}}>
-          Add Item
-        </button>
-      </span>
-      : <></>
-  )
+  return useMemo( () => {
+    console.log('Insertion interface re-render')
+    return (
+      state.toggle ?
+        <span>
+          <input type="text" onChange={handleOnChange} />
+          <button type="button" onClick={() => {dispatch({ type: 'ADD_LIST_ITEM', payload: insertion })}}>
+            Add Item
+          </button>
+        </span>
+        : <></>
+    );
+  }, [state.toggle])
 }
 
 export default Insert;

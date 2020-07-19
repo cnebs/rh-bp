@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect } from 'react';
 import Toggle from '../Toggle/Toggle.jsx';
 import List from '../List/List.jsx';
 import Insert from '../Insert/Insert.jsx';
@@ -11,7 +11,7 @@ const App = () => {
     return (
       <Store>
 
-        <h1>globalState ToDo List!</h1>
+        <h1>globalState demo</h1>
         <Toggle />
         <List />
         <Insert />

@@ -6,7 +6,7 @@ const Toggle = () => {
   const [state, dispatch] = useContext(Context);
   
   return useMemo( () => {
-    console.log('Toggle updated')
+    console.log('Toggle re-render')
     return (
       <button type="button" onClick={() => {dispatch({ type: 'TOGGLE_LIST', payload: !state.toggle})} }>
         {state.toggle ? 'Hide' : 'Show'}
