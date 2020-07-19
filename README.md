@@ -17,7 +17,7 @@ In development `npm run dev`, add environment variables to the `.env.dev` file t
 
 In production `npm run start`, either create a `.env` file with your variables or simply `$EXPORT` them in the shell.
 
-A Dockerfile is also included, which should use a port environment variable to be used if containerized and deployed on the cloud.
+A Dockerfile is also included, which should use a port environment variable if containerized and deployed on the cloud.
 
 ___
 
