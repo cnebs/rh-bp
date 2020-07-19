@@ -1,7 +1,7 @@
 # React Hooks Global-State Boilerplate
-React-Express boilerplate using global state store with hooks
+React-Express boilerplate using global state store with hooks to replace the need for Redux
 
-Includes some components to render an initial todo list that uses state the same way Redux would :)
+Includes some components to render an initial todo list that uses local state with hooks and a global state with Context API & hooks :)
 
 Remove both the components and reducer's switch cases to make a clean boilerplate for development.
 
