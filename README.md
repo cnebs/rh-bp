@@ -7,11 +7,13 @@ Includes some components to render a simple todo list :)
 
 These components include examples of state, effect, memo, and context hooks.
 
-Remove the components and reducer's switch cases to make a clean boilerplate.
+Remove the components, storeAPI's custom hooks, and reducer's switch cases to make a clean boilerplate.
 
 Use as a template for your own projects as needed.
 
 Use `npm run dev` to start.
+
+And please feel free to add issues for suggestions and bugs
 
 ___
 
