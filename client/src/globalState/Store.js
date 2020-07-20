@@ -1,19 +1,21 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useContext } from 'react';
 import Reducer from './Reducer';
 
-export const initialState = {
+const StoreContext = createContext();
+
+const initialState = {
   toggle: true,
   list: ['a', 'b', 'c']
 };
 
-const Store = ({ children }) => {
+export const Store = ({ children }) => {
   const [ state, dispatch ] = useReducer(Reducer, initialState);
   return (
-    <Context.Provider value={[ state, dispatch ]}>
+    <StoreContext.Provider value={[ state, dispatch ]}>
       {children}
-    </Context.Provider>
+    </StoreContext.Provider>
   );
 };
 
-export const Context = createContext(initialState);
-export default Store;
+export const useStore = () => useContext(StoreContext);
+// export default Store;

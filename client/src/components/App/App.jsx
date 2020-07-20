@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Toggle from '../Toggle/Toggle.jsx';
 import List from '../List/List.jsx';
 import Insert from '../Insert/Insert.jsx';
-import Store from '../../globalState/Store.js';
+import { Store } from '../../globalState/Store.js';
 
 const App = () => {
 
