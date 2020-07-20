@@ -1,10 +1,10 @@
 import React, {useContext, useState} from 'react';
-import { Context } from '../../globalState/Store.js';
+import { useStore } from '../../globalState/Store.js';
 
 
 const Delete = ({ index }) => {
 
-  const [state, dispatch] = useContext(Context);
+  const [state, dispatch] = useStore();
 
 
   return (

@@ -1,10 +1,10 @@
-import React, {useContext, useMemo} from 'react';
-import { Context } from '../../globalState/Store.js';
+import React, { useMemo } from 'react';
+import { useStore } from '../../globalState/Store.js';
 import Item from '../Item/Item.jsx';
 
 const List = () => {
 
-  const [state, dispatch] = useContext(Context);
+  const [state, dispatch] = useStore();
 
   return useMemo( () => {
     console.log('List re-render.')
