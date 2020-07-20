@@ -1,14 +1,14 @@
 import React, {useContext, useState} from 'react';
-import { useStore } from '../../globalState/Store.js';
+import { useList } from '../../globalState/StoreAPI.js';
 
 
 const Delete = ({ index }) => {
 
-  const [state, dispatch] = useStore();
+  const { deleteListItem } = useList();
 
 
   return (
-    <button type="button" onClick={ () => dispatch({ type:  'DELETE_LIST_ITEM', payload: index})}>
+    <button type="button" onClick={ () => deleteListItem(index)}>
       Remove
     </button>
   )
