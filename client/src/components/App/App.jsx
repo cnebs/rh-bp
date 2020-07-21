@@ -11,10 +11,11 @@ const App = () => {
     return (
       <Store>
 
-        <h1>globalState demo</h1>
+        <h1>globalState demo: todo list</h1>
+        <hr />
         <Toggle />
-        <List />
         <Insert />
+        <List />
 
       </Store>
     );

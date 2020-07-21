@@ -1,29 +1,31 @@
 import React, {useState, useMemo} from 'react';
 import { useStore } from '../../globalState/Store.js';
+import { useList } from '../../globalState/StoreAPI.js';
 
 
 const Insert = () => {
 
-  const [state, dispatch] = useStore();
-  const [insertion, insert] = useState('')
+  const [ { toggle } ] = useStore(),
+        { addListItem } = useList(),
+        [ insertion, insert ] = useState('');
 
   const handleOnChange = (e) => {
     insert(e.target.value);
   }
 
   return useMemo( () => {
-    console.log('Insertion interface re-render')
+    console.log('Insert re-render')
     return (
-      state.toggle ?
-        <span>
+      toggle ?
+        <div>
           <input type="text" onChange={handleOnChange} />
-          <button type="button" onClick={() => {console.log(insertion); dispatch({ type: 'ADD_LIST_ITEM', payload: insertion })}}>
+          <button type="button" onClick={() => {console.log(insertion); addListItem(insertion)}}>
             Add Item
           </button>
-        </span>
+        </div>
         : <></>
     );
-  }, [state.toggle, insertion])
+  }, [toggle, insertion])
 }
 
 export default Insert;

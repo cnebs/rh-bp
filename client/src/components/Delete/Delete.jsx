@@ -1,15 +1,15 @@
-import React, {useContext, useState} from 'react';
+import React from 'react';
 import { useList } from '../../globalState/StoreAPI.js';
 
 
 const Delete = ({ index }) => {
 
-  const { deleteListItem } = useList();
+  const { delListItem } = useList();
 
 
   return (
-    <button type="button" onClick={ () => deleteListItem(index)}>
-      Remove
+    <button type="button" onClick={ () => delListItem(index)}>
+      Complete
     </button>
   )
 }
