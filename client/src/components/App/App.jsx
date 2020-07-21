@@ -15,7 +15,11 @@ const App = () => {
         <Toggle />
         <Insert />
         <List />
+        <button type="button" onClick={() => (window.open('https://github.com/cnebs/rh-bp/issues','_blank'))}>
+          Submit an issue
+        </button>
       </Store>
+
     );
 
 }
