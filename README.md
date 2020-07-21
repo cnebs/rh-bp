@@ -1,17 +1,19 @@
 # React Hooks Global-State Boilerplate
 React-Express CRUD boilerplate using a global state store.
 
-This global state store behaves like Redux, but uses only React Context API & Hooks.
+This global state store behaves like Redux, but uses only Hooks, React Context API, & useMemo to prevent uneccesary re-renders.
 
 Includes some components to render a simple todo list :)
 
-These components include examples of state, effect, and context hooks.
+These components include examples of state, effect, memo, and context hooks.
 
-Remove the components and reducer's switch cases to make a clean boilerplate.
+Remove the components, storeAPI's custom hooks, and reducer's switch cases to make a clean boilerplate.
 
 Use as a template for your own projects as needed.
 
 Use `npm run dev` to start.
+
+And please feel free to add issues for suggestions and bugs
 
 ___
 
