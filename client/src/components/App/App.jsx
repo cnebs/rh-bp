@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
+import Header from '../Header/Header.jsx';
 import Toggle from '../Toggle/Toggle.jsx';
-import List from '../List/List.jsx';
 import Insert from '../Insert/Insert.jsx';
+import List from '../List/List.jsx';
 import { Store } from '../../globalState/Store.js';
 
 const App = () => {
@@ -10,13 +11,10 @@ const App = () => {
 
     return (
       <Store>
-
-        <h1>globalState demo: todo list</h1>
-        <hr />
+        <Header />
         <Toggle />
         <Insert />
         <List />
-
       </Store>
     );
 
