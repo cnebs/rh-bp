@@ -9,11 +9,8 @@ const port = process.env.PORT || 3000;
 // server-start logic
 async function startServer() {    
   app.listen(port, err => {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log(`Your server is ready and is serving React ! \nPORT set to ${port} !`);
+    if (err) return console.log(err);
+    else console.log(`Your server is ready and is serving React ! \nPORT set to ${port} !`);
   });
 }
 

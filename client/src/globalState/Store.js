@@ -18,4 +18,3 @@ export const Store = ({ children }) => {
 };
 
 export const useStore = () => useContext(StoreContext);
-// export default Store;

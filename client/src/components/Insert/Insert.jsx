@@ -16,14 +16,13 @@ const Insert = () => {
   return useMemo( () => {
     console.log('Insert re-render')
     return (
-      toggle ?
+      toggle &&
         <div>
           <input type="text" onChange={handleOnChange} />
           <button type="button" onClick={() => {console.log(insertion); addListItem(insertion)}}>
             Add Item
           </button>
         </div>
-        : <></>
     );
   }, [toggle, insertion])
 }

@@ -6,7 +6,6 @@ const Delete = ({ index }) => {
 
   const { delListItem } = useList();
 
-
   return (
     <button type="button" onClick={ () => delListItem(index)}>
       Complete

@@ -9,11 +9,10 @@ const List = () => {
   return useMemo( () => {
     console.log('List re-render.')
       return (
-        state.toggle ?
+        state.toggle &&
           <ul>
             {state.list.map( (item, i) => <Item key={i} item={item} index={i} />)}
           </ul>
-        : <></>
       );
   }, [state.list.length, state.toggle])
 
